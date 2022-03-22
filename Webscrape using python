@@ -1,0 +1,15 @@
+from urllib.request import urlopen
+#set website url
+url = "http://"
+#open web page
+page = urlopen(url)
+page
+#convert html to returns a sequence of bytes. Then use .decode() to decode the bytes to a string using UTF-8:
+html_bytes = page.read()
+html = html_bytes.decode("utf-8")
+# Print html as text
+print(html)
+
+#searching text using regular expressions (regex)
+import re
+#
